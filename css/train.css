@@ -1,0 +1,127 @@
+:root {
+    --clr-primary: #f0f0f0;
+    --clr-secondary: #bbb490;
+    --clr-secondary-head: #8a8469;
+    --gold: #ffc430;
+    --white: #fff;
+    --black: #000;
+    --black-hover: rgb(39, 39, 39);
+    --transparent-bg: rgba(255, 255, 255, 0.6);
+    /* ==== font-size ==== */
+    --size300: 1.9rem;
+
+    /* ==== border width ==== */
+    --border300: 3px;
+
+    /* ==== background blur  ==== */
+    --blur300: blur(8px);
+}
+
+main {
+    padding-top: 2.5rem;
+}
+
+.train-head {
+    width: 90%;
+    text-align: center;
+    padding: 1rem 0;
+    margin-inline: auto;
+    background: var(--clr-secondary-head);
+    color: var(--white);
+}
+
+.train-pic-wrap {
+    width: 90%;
+    display: flex;
+    margin-inline: auto;
+}
+
+.train-pic-wrap .train-pic {
+    flex-basis: 33.33%;
+    height: 200px;
+}
+
+.train-pic-wrap .train-pic:nth-child(1) {
+    background-image: url("../assets/img-7.jpg");
+
+}
+
+.train-pic-wrap .train-pic:nth-child(2) {
+    background-image: url("../assets/img-4.jpg");
+
+}
+
+.train-pic-wrap .train-pic:nth-child(3) {
+    background-image: url("../assets/img-5.jpg");
+}
+
+.options {
+    width: 90%;
+    display: flex;
+    margin-inline: auto;
+    border: var(--border300) solid var(--clr-secondary);
+
+}
+
+.options div {
+    flex-basis: 50%;
+}
+
+.options div .sub-head {
+    font-size: 1.8rem;
+}
+
+.options .btn-style {
+    width: fit-content;
+    margin-top: 1rem;
+}
+
+.options div .btn-free {
+    background-color: var(--white);
+    border: var(--border300) solid var(--black);
+    color: var(--black);
+}
+
+.options div .btn-paid {
+    border: var(--border300) solid var(--white);
+    color: var(--white);
+    background-color: var(--black);
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    /* reviews */
+
+    .train-pic-wrap {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        height: 250px;
+    }
+
+    .train-pic-wrap .train-pic {
+        min-width: 50%;
+        height: 200px;
+        scroll-snap-align: start;
+
+    }
+
+    .options {
+        flex-flow: row wrap;
+    }
+
+    .options div {
+        min-width: 100%;
+    }
+
+
+}
+
+@media only screen and (max-width: 560px) {
+
+    /* reviews */
+    .train-pic-wrap .train-pic {
+        min-width: 100%;
+    }
+
+}

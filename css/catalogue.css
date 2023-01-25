@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    border: 10px solid #ffffff;
+}
+
+.wrapper {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    animation: slide 16s infinite;
+    box-shadow: inset 0 0 0 1.5rem var(--transparent-bg);
+}
+
+img {
+    min-width: 100%;
+    object-fit: cover;
+    box-shadow: inset 0 0 0 1.5rem var(--transparent-bg);
+
+}
